@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +18,8 @@ public class UsuarioEntity {
 	private String nome;
 	private String senha;
 	private String email;
+	@JoinColumn(name="idPerfil")
+	@OneToOne
 	private PerfilEntity perfil;
 
 	public Integer getId() {

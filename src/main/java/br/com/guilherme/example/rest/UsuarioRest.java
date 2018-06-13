@@ -13,13 +13,13 @@ public class UsuarioRest {
 	@Autowired
 	private UsuarioBusiness usuarioBusiness;
 
-	@PostMapping(value = "cadastro")
-	public ResponseEntity<Object> cadastro(){
-		return null;
-	}
-	
-	@PostMapping(value = "consulta")
-	public ResponseEntity<Object> consulta(){
-		return null;
-	}
+//	@PostMapping(value = "cadastro")
+//	public ResponseEntity<Object> cadastro(){
+//		return null;
+//	}
+//	
+//	@PostMapping(value = "consulta")
+//	public ResponseEntity<Object> consulta(){
+//		return null;
+//	}
 }

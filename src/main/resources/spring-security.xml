@@ -8,7 +8,18 @@
 	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
 	<http auto-config="true">
-		<intercept-url pattern="/**" access="ROLE_USER" />
+		<intercept-url access="permitAll" pattern="/favicon.ico" />
+		<intercept-url access="permitAll" pattern="/css/**" />
+		<intercept-url access="permitAll" pattern="/fonts/**" />
+		<intercept-url access="permitAll" pattern="/img/**" />
+		<intercept-url access="permitAll" pattern="/js/**" />
+		<intercept-url access="permitAll" pattern="/premium/**" />
+		<intercept-url access="permitAll" pattern="/plugins/**" />
+		<intercept-url access="permitAll" pattern="/login" />
+		<intercept-url access="isAuthenticated()" pattern="/**" requires-channel="any"/>
+		<!--Login customizado -->
+		<form-login login-page="/login" password-parameter="senha" username-parameter="user"/>
+		<csrf />
 	</http>
 
 	<authentication-manager>

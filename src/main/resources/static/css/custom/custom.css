@@ -1,0 +1,106 @@
+@media ( max-width : 850px) {
+	.table-respon {
+		min-height: .01%;
+		overflow-x: auto;
+	}
+}
+
+.dataTables_filter {
+	display: none;
+}
+
+.left {
+	float: left;
+	margin-right: 5px;
+}
+
+input[type=date].form-control {
+	line-height: 10px !important;;
+}
+.bombom{	
+    padding-right: 0px;
+    padding-left: 0px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;	
+   	text-align: center;
+}
+.ouro {
+    margin: 50px;
+    width: 300px;
+    height: 98px;
+}
+.table-color {
+    background: #00CAB2;
+    color: #F5FFFB;
+}
+
+.color-tag {
+	width: 5%;
+	height: 100%;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.tag-ferias {
+	background-color: #9EE367;
+}
+
+.tag-licenca {
+	background-color: #509DFC;
+}
+
+.tag-feriado {
+	background-color: #FD593F;
+}
+
+.tag-data-bloqueada {
+	background-color: #7E7D7D;
+}
+.label-status {
+    display: inline-block;
+    padding: .3em .6em .3em;
+    /*font-weight: 700;*/
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    width: 100px;
+}
+
+.label-status-aprovado{
+	background-color: #8bc34a;
+	border-radius: 0;
+}
+
+.label-status-analise{
+	background-color: #EEDC82;
+	border-radius: 0;
+}
+
+.label-status-reprovado{
+	background-color: #FF4500;
+	border-radius: 0;
+}
+
+.label-message {
+    display: inline-block;
+    padding: .3em .6em .3em;
+    /*font-weight: 700;*/
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.label-message-ok{
+	background-color: #8bc34a;
+	border-radius: 0;
+}
