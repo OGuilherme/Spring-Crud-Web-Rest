@@ -1,35 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html;">
 	<title>Spring Crud</title>
 
 	<!--STYLESHEET-->
     <!--=================================================-->
     <!--Open Sans Font [ OPTIONAL ]-->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'/>
 
     <!--Bootstrap Stylesheet [ REQUIRED ]-->
-    <link href='<c:url value="/css/bootstrap.min.css"/>' rel="stylesheet">
+    <link type='text/css' href='<c:url value="/static/css/bootstrap.min.css"/>' rel="stylesheet"/>
 
     <!--Nifty Stylesheet [ REQUIRED ]-->
-    <link href='<c:url value="/css/nifty.min.css"/>' rel="stylesheet">
+    <link type='text/css' href="<c:url value='/static/css/nifty.min.css'/>" rel="stylesheet"/>
     
-    <link href='<c:url value="/plugins/ionicons/css/ionicons.min.css"/>' rel="stylesheet">
+    <link type='text/css' href='<c:url value="/static/plugins/ionicons/css/ionicons.min.css"/>' rel="stylesheet"/>
     
     <!--Bootstrap Validator [ OPTIONAL ]-->
-    <link href='<c:url value="/plugins/bootstrap-validator/bootstrapValidator.min.css"/>' rel="stylesheet">
+    <link type='text/css' href='<c:url value="/static/plugins/bootstrap-validator/bootstrapValidator.min.css"/>' rel="stylesheet"/>
     
     <!--jQuery [ REQUIRED ]-->
-    <script src='<c:url value="/js/jquery.min.js"/>'></script>
+    <script type='text/javascript' src='<c:url value="/static/js/jquery.min.js"/>'></script>
     
     <!--Bootstrap Validator [ OPTIONAL ]-->
-    <script src='<c:url value="/plugins/bootstrap-validator/bootstrapValidator.min.js"/>'></script>
-    <script src='<c:url value="/js/custom/login.js"/>'></script>
+    <script type='text/javascript' src='<c:url value="/static/plugins/bootstrap-validator/bootstrapValidator.min.js"/>'></script>
+    <script type='text/javascript' src='<c:url value="/static/js/custom/login.js"/>'></script>
 
 </head>
 <body>
@@ -49,21 +48,21 @@
 						<div class="panel-body">
 							<c:if test="${param.error != null}">
                                 <div class="alert alert-danger">
-                                    <p>UsuÃ¡rio ou senha invÃ¡lidos. Por favor, digite novamente.</p>
+                                    <p>Usuário ou senha inválidos. Por favor, digite novamente.</p>
                                 </div>
                            	</c:if>
                            	<c:if test="${param.logout != null}">
                                 <div class="alert alert-success">
-                                    <p>VocÃª foi desconectado com sucesso.</p>
+                                    <p>Você foi desconectado com sucesso.</p>
                                 </div>
                            	</c:if>
 							<div class="form-group has-feedback">
 								<i class="ion-person icon-lg form-control-feedback"></i>
-				               	<input type="text" id="#" class="form-control" name="user" placeholder="UsuÃ¡rio" autofocus>
+				               	<input type="text" id="user" class="form-control" name="user" placeholder="Usuário" autofocus>
 				            </div>
 				            <div class="form-group has-feedback">
 								<i class="ion-locked icon-lg form-control-feedback"></i>
-				               	<input type="password" id="#" class="form-control" name="senha" placeholder="Senha 	" autofocus>
+				               	<input type="password" id="senha" class="form-control" name="senha" placeholder="Senha 	" autofocus>
 				            </div>
 							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 							<div class="pad-top">

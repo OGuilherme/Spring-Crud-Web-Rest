@@ -2,14 +2,11 @@ package br.com.guilherme.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-@Configuration
-@EnableWebSecurity
-public class Application extends SpringBootServletInitializer{
+@ImportResource(value={"classpath:security-config.xml"})
+public class Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);

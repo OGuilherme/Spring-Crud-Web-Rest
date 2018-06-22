@@ -18,9 +18,20 @@ public class UsuarioEntity {
 	private String nome;
 	private String senha;
 	private String email;
-	@JoinColumn(name="idPerfil")
+	@JoinColumn(name = "idPerfil")
 	@OneToOne
 	private PerfilEntity perfil;
+
+	public UsuarioEntity() {
+	}
+
+	public UsuarioEntity(UsuarioEntity usuario) {
+		this.id = usuario.getId();
+		this.nome = usuario.getNome();
+		this.senha = usuario.getSenha();
+		this.email = usuario.getEmail();
+		this.perfil = usuario.getPerfil();
+	}
 
 	public Integer getId() {
 		return id;

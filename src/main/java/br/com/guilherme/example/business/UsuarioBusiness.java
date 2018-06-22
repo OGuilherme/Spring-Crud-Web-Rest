@@ -18,34 +18,34 @@ import br.com.guilherme.example.exception.CustomException;
 @Service
 @Component
 public class UsuarioBusiness {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(UsuarioBusiness.class);
-	
+
 	@Autowired
 	private UsuarioDao usuarioDao;
-	
+
 	@Autowired
 	private UsuarioConverter usuarioConverter;
-	
+
 	public Boolean cadastrar(UsuarioBean bean) throws CustomException {
 		try {
-			usuarioDao.save(usuarioConverter.convertBeanToEntity(bean)); 
+			usuarioDao.save(usuarioConverter.convertBeanToEntity(bean));
 			return true;
-		}catch(Exception e) {
-			log.error("Ocorreu um erro ao cadastrar usuário. "+e);
-			throw new CustomException("Ocorreu um erro ao cadastrar usuário "+bean.getNome());
+		} catch (Exception e) {
+			log.error("Ocorreu um erro ao cadastrar usuário. " + e);
+			throw new CustomException("Ocorreu um erro ao cadastrar usuário " + bean.getNome());
 		}
 	}
-	
+
 	public List<UsuarioBean> consultarTodos() {
 		List<UsuarioEntity> entities = usuarioDao.findAll();
 		return usuarioConverter.convertEntityToBean(entities);
 	}
-	
+
 	public UsuarioBean consultarPorId(Integer id) {
 		Optional<UsuarioEntity> entity = usuarioDao.findById(id);
-		if(!entity.isPresent()) {
-			
+		if (!entity.isPresent()) {
+
 		}
 		return usuarioConverter.convertEntityToBean(entity.get());
 	}
